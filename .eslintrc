@@ -1,0 +1,14 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "func-names": ["error", "never"],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "global-require": 0
+  },
+  "globals": {
+    "navigator": true,
+    "global": true,
+    "console": true
+  }
+}
