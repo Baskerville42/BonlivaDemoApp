@@ -4,10 +4,13 @@ import {
   initApp,
 } from './actions';
 
-const initialState = Map({
+const initialState = {
   isInit: false,
-});
+};
 
 export default handleActions({
-  [initApp]: state => state.set('isInit', true),
+  [initApp]: state => ({
+    ...state,
+    isInit: true,
+  }),
 }, initialState);
