@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react';
-import { AppRegistry, YellowBox } from 'react-native';
+import { AppRegistry, YellowBox, SafeAreaView } from 'react-native';
 import { Provider } from 'react-redux';
 
 import {name as appName} from './app.json';
@@ -13,7 +13,9 @@ YellowBox.ignoreWarnings(['unknown call: "relay:check"']);
 
 const App = () => (
   <Provider store={Store}>
-    <RootStack ref={navigatorRef => NavigationService.setTopLevelNavigator(navigatorRef)} />
+    <SafeAreaView style={{ flex: 1 }}>
+      <RootStack ref={navigatorRef => NavigationService.setTopLevelNavigator(navigatorRef)} />
+    </SafeAreaView>
   </Provider>
 );
 
